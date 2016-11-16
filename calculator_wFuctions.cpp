@@ -17,7 +17,7 @@ int basic_Calc();
 
 int main(){
 
- while(menu != 6){
+ do{
 
     cout << " What do you want to d?\n";
     cout << " 1 Add\n";
@@ -49,7 +49,7 @@ int main(){
      Delta();
      break;
 }
-}
+}while(menu != 6);
 return 1;
 }
 
