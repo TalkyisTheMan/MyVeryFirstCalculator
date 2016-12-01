@@ -2,9 +2,10 @@
 #include<vector>
 #include<string>
 #include<math.h>
+#include<stdlib.h>
 using namespace std;
 
-int menu;
+char menu;
 float number1;
 float number2;
 
@@ -19,37 +20,38 @@ int main(){
 
  do{
 
-    cout << " What do you want to d?\n";
+    cout << " What do you want to do? h for list\n";
+    
+    cin >> menu;
+    
+ if(menu == 'h'){
     cout << " 1 Add\n";
     cout << " 2 Subtract\n";
     cout << " 3 Multiply\n";
     cout << " 4 Devide\n";
     cout << " 5 Delta\n";
-    cout << " 6 Exit\n";
-    cin >>  menu;
-
-
-
+    cout << " q Exit\n";
+    }
 
 
  switch(menu){
-    case 1:
+    case '1':
      add();
      break;
-    case 2:
+    case '2':
      subtract();
      break;
-    case 3:
+    case '3':
      multiply();
      break;
-    case 4:
+    case '4':
      devide();
      break;
-    case 5:
+    case '5':
      Delta();
      break;
 }
-}while(menu != 6);
+}while(menu != 'q');
 return 1;
 }
 
